@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<div id=log style="white-space:pre;"></div>
+
+<script>
+  const plugins = Array.from(navigator.plugins).map(e=>e.name).join('\n    ');
+  const mimeTypes = Array.from(navigator.mimeTypes).map(e=>e.type).join('\n    ');
+  log.textContent = `navigator.plugins:\n    ${plugins}\n\nnavigator.mimetypes:\n    ${mimeTypes}\n`;
+</script>
+
+</script>

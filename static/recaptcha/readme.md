@@ -17,3 +17,13 @@ The backend currently support these reCAPTCHA types and keys:
 ```
 
 You can either provide e.g. `&type=v2-checkbox` or `&site_key=6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy` to the verification backend.
+
+## Documentation
+
+* v2
+    * checkbox: https://developers.google.com/recaptcha/docs/display
+    * invisible: https://developers.google.com/recaptcha/docs/invisible
+* v3
+    * https://developers.google.com/recaptcha/docs/v3
+* Enterprise
+    * https://cloud.google.com/recaptcha-enterprise/docs/resources

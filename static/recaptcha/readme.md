@@ -1,8 +1,11 @@
-A collection of various reCAPTCHA deployment types, for testing purposes.
+## A collection of various reCAPTCHA deployment types, for testing purposes.
 
-Contributions and new tests for edge cases are welcome.
+Link: https://berstend.github.io/static/recaptcha/
 
-Just copy/paste one of the existing html files as reference (and use a meaningful file name).
+Contributions and new tests for edge cases are welcome:
+* Copy/paste one of the existing html files as reference
+* Use a meaningful file name in the pattern of the existing ones
+* Update the `<pre>` tag in the html file with bullet points/references as needed
 
 The backend currently support these reCAPTCHA types and keys:
 ```js
@@ -14,4 +17,3 @@ The backend currently support these reCAPTCHA types and keys:
 ```
 
 You can either provide e.g. `&type=v2-checkbox` or `&site_key=6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy` to the verification backend.
-

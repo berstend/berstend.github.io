@@ -1,0 +1,31 @@
+<html>
+   <head>
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+     <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.enterprise.render('html_element', {
+          'sitekey' : ' 6LdS5rYaAAAAAAedijMGAVLdt4g_b8b6fXv2d71I',
+          'action'  : 'homepage',
+        });
+      };
+    </script>
+  </head>
+  <body>
+
+<pre>
+* Enterprise
+* Explicitly render the reCAPTCHA widget
+* Submit via form POST
+* https://cloud.google.com/recaptcha-enterprise/docs/instrument-web-pages-with-checkbox#expandable-2
+</pre>
+            
+    <form action="https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6LdS5rYaAAAAAAedijMGAVLdt4g_b8b6fXv2d71I&action=homepage" method="POST">
+      <div id="html_element"></div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+      <script src="https://www.google.com/recaptcha/enterprise.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+  </body>
+</html>

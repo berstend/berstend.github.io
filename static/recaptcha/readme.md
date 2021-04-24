@@ -13,7 +13,9 @@ The backend currently support these reCAPTCHA types and keys:
     "v2-checkbox": "6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy",
     "v2-invisible": "6LfAGLYaAAAAALoLXYu2vn27KBemkjiVceMYmBUh",
     "v3": "6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw",
-    "enterprise-checkbox": "6LdS5rYaAAAAAAedijMGAVLdt4g_b8b6fXv2d71I",    
+    "enterprise-checkbox": "6LdS5rYaAAAAAAedijMGAVLdt4g_b8b6fXv2d71I",
+    "enterprise-invisible": "6LcIyrYaAAAAANkZ7vGkYc_1xi0no8m2H4SlTZOW",
+    "enterprise-score": "6LceoLYaAAAAAIJ_sreUI_ocF0Kkdd71pzT-1c_a",
     "hcaptcha": "4233e6e8-2f76-45d0-bcd2-c5d896f48225"
 }
 ```

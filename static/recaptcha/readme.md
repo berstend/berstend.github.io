@@ -7,7 +7,7 @@ Contributions and new tests for edge cases are welcome:
 * Use a meaningful file name in the pattern of the existing ones
 * Update the `<pre>` tag in the html file with bullet points/references as needed
 
-The backend currently support these reCAPTCHA types and keys:
+The dummy backend currently support these reCAPTCHA types and keys:
 ```js
 {
     "v2-checkbox": "6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy",

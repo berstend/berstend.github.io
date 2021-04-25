@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    
+<pre>
+* No www domain
+* Automatically render the reCAPTCHA widget
+* Submit via form POST
+* Use recaptcha.net domain: https://developers.google.com/recaptcha/docs/faq#can-i-use-recaptcha-globally
+* https://developers.google.com/recaptcha/docs/display#auto_render
+</pre>
+    
+    <form action="https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LcU-rUaAAAAAHG4SFI_PJfVLtYyuVRuU_DRuIXy"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

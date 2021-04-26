@@ -24,10 +24,11 @@
       e.preventDefault();
       grecaptcha.ready(function() {
         grecaptcha.execute('6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw', {action: 'submit'}).then(async function(token) {
-          document.getElementById('results').value = await (await fetch(`https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw&g-recaptcha-response=${token}`)).json()
+          const value = await (await fetch(`https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw&g-recaptcha-response=${token}`)).json()
+          document.getElementById('results').value = JSON.stringify(value, null, 2)
         });
       });
-    }     
+    }
 
     document.getElementById("submit").addEventListener("click", onClick);       
   </script>    

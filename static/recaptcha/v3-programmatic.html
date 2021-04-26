@@ -12,23 +12,25 @@
 * Programmatically invoke the challenge
 * https://developers.google.com/recaptcha/docs/v3#programmatically_invoke_the_challenge
 </pre>
-    
-   <script>
-      function onClick(e) {
-        e.preventDefault();
-        grecaptcha.ready(function() {
-          grecaptcha.execute('6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw', {action: 'submit'}).then(async function(token) {
-            document.getElementById('results').value = await (await fetch(`https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw&g-recaptcha-response=${token}`)).json()
-          });
-        });
-      }
-  </script>
-    
+      
     <div>
-      <button onclick="onClick">Submit</button>
+      <button id="submit">Submit</button>
     </div>
     
     <textarea id="results" style="height: 400px;width: 100%;">Results will show up here</textarea>
+
+   <script>
+   function onClick(e) {
+      e.preventDefault();
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw', {action: 'submit'}).then(async function(token) {
+          document.getElementById('results').value = await (await fetch(`https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6Lc2GbYaAAAAAO7eQ7Xs4uPdEmlz3BD3aAxf94Lw&g-recaptcha-response=${token}`)).json()
+        });
+      });
+    }     
+
+    document.getElementById("submit").addEventListener("click", onClick);       
+  </script>    
     
   </body>
 </html>

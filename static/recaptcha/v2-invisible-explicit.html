@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+    <script>
+        var onSubmit = function(token) {
+          alert('success!');
+        };
+
+        var onloadCallback = function() {
+          grecaptcha.render('submit', {
+            'sitekey' : '6LcU-6LfAGLYaAAAAALoLXYu2vn27KBemkjiVceMYmBUh',
+            'callback' : onSubmit
+          });
+        };
+    </script>
+  </head>
+  <body>
+
+<pre>
+* Invisible recaptcha v2
+* Explicit rendering after an onload callback
+* https://developers.google.com/recaptcha/docs/invisible#examples
+</pre>    
+    
+    <form action="https://recaptcha-endpoint-3j4pqc8v5m7y.runkit.sh/?site_key=6LcU-6LfAGLYaAAAAALoLXYu2vn27KBemkjiVceMYmBUh" method="POST">
+      <input id='submit' type="submit" value="Submit">
+    </form>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+  </body>
+</html>

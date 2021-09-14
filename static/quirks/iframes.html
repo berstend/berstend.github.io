@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<div id=log style="white-space:pre;"></div>
+
+<script>
+  const basiciframe = (() => {
+    var el = document.createElement('iframe');
+    document.body.appendChild(el);
+    return el.contentWindow.navigator.platform;
+  })()
+
+  const sandboxSOiframe = (() => {
+    var el = document.createElement('iframe');
+    el.setAttribute('sandbox', 'allow-same-origin');
+    document.body.appendChild(el);
+    return el.contentWindow.navigator.platform;
+  })()
+
+  const sandboxSOASiframe = (() => {
+    var el = document.createElement('iframe');
+    el.setAttribute('sandbox', 'allow-same-origin allow-scripts');
+    document.body.appendChild(el);
+    return el.contentWindow.navigator.platform;
+  })()
+
+  const srcdociframe = (() => {
+    var el = document.createElement('iframe');
+    el.srcdoc = 'blank page, boys.';
+    document.body.appendChild(el);
+    return el.contentWindow.navigator.platform;
+  })()
+
+  const results = {
+    window: navigator.platform,
+    basiciframe,
+    sandboxSOiframe,
+    sandboxSOASiframe,
+    srcdociframe
+  }
+
+  log.textContent = JSON.stringify(results, null, 2);
+</script>
